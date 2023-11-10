@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container-home">
+  <div class="container-banner">
+      <button class="arrow-left" aria-label="Proximo"><i class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #2f3f2c;"></i></button>
+
+      <button class="arrow-right" aria-label="Anterior"><i class="fa-solid fa-arrow-right" style="color: #2f3f2c;"></i></button>
+
+    <div class="gallery-wrapper">
+      <div class="gallery">
+        <%= image_tag "foto1_carrossel.jpg", class: "item current-item", style: "width: 90%; height: 350px" %>
+        <%= image_tag "foto2_carrossel.JPG", class: "item current-item", style: "width: 90%; height: 350px" %>
+      </div>
+    </div>
+  </div>
+  <h1>Pages#home</h1>
+        <i class="fa-solid fa-arrow-right" style="color: #2f3f2c;">'arrow'</i>
+  <p>Find me in app/views/pages/home.html.erb</p>
+</div>
