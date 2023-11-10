@@ -16,15 +16,15 @@
       <p> Contato </p>
     </div>
     <div class="nav-item p-1">
-      <p> Cadastre-se </p>
+      <%= link_to "Cadastre-se", new_user_registration_path, class: "sign_up_bar" %>
     </div>
   </div>
   <div class="col-3 d-flex justify-content-center">
     <div class="btn login-home p-1 text-center">
-      <p> Entrar </p>
+      <%= link_to "Entrar", new_user_session_path, class: "sign_up_bar" %>
     </div>
     <div class="btn login-home p-1 text-center ms-3">
-      <p> Admin </p>
+      <%= link_to "Admin", new_admin_session_path, class: "sign_up_bar" %>
     </div>
   </div>
 
