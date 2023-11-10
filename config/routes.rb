@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  get 'pages/about_us'
+  get 'pages/products'
+  get 'pages/knowledge'
+  get 'pages/contact'
+  get 'pages/signup'
   get 'admins/index'
   get 'admins/show'
   get 'admins/new'
