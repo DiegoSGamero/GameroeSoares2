@@ -1,3 +1,30 @@
-.container-home {
+.main-body {
+  background-color: #f3fff1;
+}
+
+.container-banner {
   margin: 0 auto;
+  position: relative;
+  padding: 12px;
+  width: 95%;
+}
+
+.gallery {
+  flex-flow: row nowrap;
+  gap: 16px;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to left, transparent 0%, black 200%);
 }
