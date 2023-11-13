@@ -1,14 +1,46 @@
 <div class="footer">
-  <div class="technician-infos">
-    <div class="name-crea">
-      <p> Técnico agrimensor: Pedro Gamero </p>
-      <p> CREA: 5069875105-SP </p>
+  <div class="infos-footer">
+    <div class="technician-infos d-flex justify-content-between">
+      <div class="name-crea m-1">
+        <p> Técnico agrimensor: Pedro Gamero </p>
+        <p> CREA: 5069875105-SP </p>
+      </div>
+
+      <div class="logo-footer">
+        <%= link_to root_path, class: "footer-brand m-0" do %>
+          <%= image_tag "gameroesoares-removebg-preview.png", class: "logotipo-footer" %>
+        <% end %>
+      </div>
+
+      <div class="contacts-links m-1">
+        <div class="whatssap d-flex">
+
+          <div class="link-whats m-1">
+            <%= link_to "https://wa.me/5512997100762", target: "_blank" do %>
+              <i class="fa-brands fa-whatsapp" style="color: #2c4c30;"></i>
+            <% end %>
+          </div>
+          <div class="talk-us m-1">
+            <p> Fale conosco </p>
+          </div>
+        </div>
+
+
+        <div class="email d-flex">
+          <div class="mail-icon m-1">
+          <i class="fa-regular fa-envelope" style="color: #2c4c30;"></i>
+          </div>
+          <div class="mail-address m-1">
+            <p> contato.gamero.topografia@gmail.com </p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-    <div class="contacts">
-      <%= link_to "https://wa.me/seu_numero_telefone", target: "_blank" do %>
-        <%= fa_icon 'whatsapp', class: 'fab' %>
-        Entre em Contato pelo WhatsApp
-      <% end %>
+    <div class="addres-infos m-1 text-center">
+      <p> Av. Dr. Carlos Guimarães, 180 - 2 andar,
+        apto 1 - Centro - Paraibuna, SP </p>
     </div>
   </div>
 </div>
