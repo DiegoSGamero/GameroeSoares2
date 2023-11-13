@@ -1,4 +1,5 @@
 <div class="container-home">
+  <%# here is the carousel part %>
   <div class="container-banner my-3">
       <button class="arrow-left control" aria-label="Proximo"><i class="fa-solid fa-arrow-right fa-flip-horizontal" style="color: #fff;"></i></button>
 
@@ -11,10 +12,51 @@
       </div>
     </div>
   </div>
-  <h1>Pages#home</h1>
-        <i class="fa-solid fa-arrow-right" style="color: #2f3f2c;">'arrow'</i>
-  <p>Find me in app/views/pages/home.html.erb</p>
+
 </div>
 <div class="container-landing">
+  <%# company's presentation in a flex box %>
+  <div class="presentation d-flex justify-content-around row">
 
+    <div class="text-presentation col-7 m-2 px-4">
+      <h1 class="text-center"> Gamero e Soares? Topografia? </h1>
+      <p> Somos uma empresa especializada em serviços topográficos, tais como geolocalização, registro de CAR, agrimensura, entre outros. Nossa missão é executar serviços de excelência, destacando nossa expertise e foco em resultados positivos, utilizando os avanços tecnológicos da área a favor do cliente.</p>
+      <p>
+        A topografia é uma área que tem por principal objetivo representar graficamente, através da planta de levantamento, todas as características de um certo ambiente, incluindo o relevo, curvas de nível, elementos existentes como rios e riachos, metragem, cálculo de área, pontos cotados, norte magnético ou verdadeiro, coordenadas geográficas, acidentes geográficos, etc.
+      </p>
+    </div>
+
+    <div class="landing-animation col-3 m-2 text-center">
+      <%= image_tag "png-transparent-surveyor-removebg-preview.png", style: "width: 300px; height: 275px" %>
+    </div>
+
+  </div>
+
+  <div class="why mt-5">
+
+    <div class="text-why m-2 px-4">
+      <div class="subtitle-2 m-2">
+        <h1 class="text-center mt-2"> Para que contratar? </h1>
+      </div>
+      <div>
+        <p> Contratar serviços de topografia é essencial para procedimentos como venda, divisão ou retificação de matrículas de imóveis rurais. O georreferenciamento, realizado por meio de levantamentos topográficos, é um processo fundamental que define com precisão a forma, dimensão e localização do imóvel rural. Essa formalização técnica da área é crucial para atender aos requisitos legais e facilitar transações imobiliárias.</p>
+        <p> Certamente, o georreferenciamento e os serviços de topografia desempenham um papel crucial em várias situações relacionadas a propriedades rurais e urbanas. Além da questão de venda, divisão ou retificação de matrículas, existem outros motivos pelos quais as pessoas buscam serviços de topografia, incluindo:
+          <ul>
+            <li> Regularização Fundiária;</li>
+            <li> Projetos de Construção; </li>
+            <li> Planejamento Urbano; </li>
+            <li> Agricultura: gestão de culturas, drenagem de terrenos e planejamento de irrigação; </li>
+            <li> Monitoramento Ambiental; </li>
+          </ul>
+        Cada um desses motivos destaca a importância da topografia em diversos setores, contribuindo para a tomada de decisões informadas e o uso eficiente da terra. </p>
+      </div>
+    </div>
+
+    <div class="landing-animation col-3 m-2 d-flex justify-content-center">
+      <div>
+        <%= image_tag "png-transparent-surveyor-removebg-preview.png", style: "width: 250px; height: 300px" %>
+      </div>
+    </div>
+
+  </div>
 </div>
