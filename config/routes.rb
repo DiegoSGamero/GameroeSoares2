@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'pages/about_us'
   get '/produtos', to: "pages#products"
   get '/conhecimento', to: "pages#knowledge"
-  get '/contato', to: "pages#contacts"
+  get '/contato', to: "pages#contact"
   get '/trabalhos', to: "pages#works"
   get 'pages/signup'
   get 'admins/index'
