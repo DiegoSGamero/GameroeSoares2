@@ -14,6 +14,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def works
+  end
+
   def signup
   end
 end

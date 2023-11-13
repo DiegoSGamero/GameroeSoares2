@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'pages/about_us'
   get '/produtos', to: "pages#products"
-  get 'pages/knowledge'
-  get 'pages/contact'
+  get '/conhecimento', to: "pages#knowledge"
+  get '/contato', to: "pages#contacts"
+  get '/trabalhos', to: "pages#works"
   get 'pages/signup'
   get 'admins/index'
   get 'admins/show'
