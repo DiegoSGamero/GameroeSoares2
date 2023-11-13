@@ -24,12 +24,13 @@ controls.forEach(control => {
       currentItem = maxItems - 1;
     }
 
-    console.log("control", isLeft, currentItem);
+    // console.log("control", isLeft, currentItem);
 
     items.forEach(item => {
       items[currentItem].scrollIntoView({
-        inline: "center",
-        behavior: "smooth"
+        // inline: "center",
+        block: "center",
+        behavior: "smooth",
       });
     });
   })
