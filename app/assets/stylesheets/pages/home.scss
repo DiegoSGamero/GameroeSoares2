@@ -1,5 +1,21 @@
 .main-body {
-  background-color: #f9fff8;
+  background-color: #bdccba;
+  position: relative;
+}
+
+.main-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('background_products.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1; /* ajuste o valor de opacidade conforme necessário */
+  z-index: -1; /* coloca o pseudo-elemento atrás do conteúdo */
 }
 
 .container-landing {
@@ -75,5 +91,5 @@
 // text
 
 .presentation {
-  color: #2C4C30;
+  color: #1c301e;
 }
