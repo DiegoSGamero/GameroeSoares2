@@ -1,16 +1,17 @@
 <div class="d-none container-signup d-flex justify-content-evenly row" data-signup-target="user">
   <div class="signup-form col-sm-10 col-md-6">
+    <h2 style="color: #1c301e;" class="text-center my-3">Cadastro</h2>
     <h2 style="color: #1c301e;" class="text-center">Cliente/Confrontante</h2>
 
     <div class="user-signup-form">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
-        
+
         <div class="field m-2">
           <%= f.label :full_name, "Nome Completo" %><br />
           <%= f.text_field :full_name,
                             autofocus: true,
-                            autocomplete: "name",
+                            autocomplete: "full_name",
                             required: true,
                             class: "wide-input" %>
         </div>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :RG, "RG (com pontos e hífen)" %><br />
+          <%= f.label :RG, "RG (somente os dígitos)" %><br />
           <%= f.text_field :RG,
                             autocomplete: "off",
                             autofocus: true,
@@ -45,7 +46,7 @@
 
 
         <div class="field m-2">
-          <%= f.label :CPF, "CPF (com pontos e hífen)" %><br />
+          <%= f.label :CPF, "CPF (somente os dígitos)" %><br />
           <%= f.text_field :CPF,
                           autocomplete: "off",
                           autofocus: true,
@@ -67,13 +68,13 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :phone_number, "Telefone" %><br />
+          <%= f.label :phone_number, "Telefone (com DDD)" %><br />
           <%= f.text_field :phone_number,
-                                autocomplete: "phone-number",
-                                autofocus: true,
-                                required: true,
-                                placeholder: " ( _ _ ) _ _ _ _ _ - _ _ _ _ ",
-                                class: "wide-input" %>
+                            autocomplete: "phone-number",
+                            autofocus: true,
+                            required: true,
+                            placeholder: "( _ _ ) _ _ _ _ _ - _ _ _ _ ",
+                            class: "wide-input" %>
         </div>
 
         <div class="field m-2">

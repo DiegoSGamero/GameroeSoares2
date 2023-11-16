@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
   devise_for :admins, controllers: {
-    sessions: 'admins/sessions'
+  registrations: 'admins/registrations'
   }
+
   devise_for :users, controllers: {
-   sessions: 'users/sessions'
+  registrations: 'users/registrations'
   }
+
+  devise_scope :user do
+    get 'users/sign_up', to: 'users/registrations#new'
+  end
+
+  devise_scope :admin do
+    get 'admins/sign_up', to: 'admins/registrations#new'
+  end
+
   root to: "pages#home"
   get 'pages/about_us'
   get '/produtos', to: "pages#products"
