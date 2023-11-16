@@ -17,7 +17,7 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :fantasy_name, "Nome Fantasia(opção empresa)" %><br />
+          <%= f.label :fantasy_name, "Nome Fantasia (opção empresa)" %><br />
           <%= f.text_field :fantasy_name,
                             autofocus: true,
                             autocomplete: "fantasy_name",
@@ -30,25 +30,28 @@
                             autofocus: true,
                             autocomplete: "email",
                             required: true,
+                            placeholder: "username@example.com.br",
                             class: "wide-input" %>
         </div>
 
         <div class="field m-2">
-          <%= f.label :RG, "RG" %><br />
+          <%= f.label :RG, "RG (com pontos e hífen)" %><br />
           <%= f.text_field :RG,
                             autocomplete: "off",
                             autofocus: true,
                             required: true,
+                            placeholder: " _ _ . _ _ _ . _ _ _ - _ ",
                             class: "wide-input" %>
         </div>
 
 
         <div class="field m-2">
-          <%= f.label :CPF, "CPF" %><br />
+          <%= f.label :CPF, "CPF (com pontos e hífen)" %><br />
           <%= f.text_field :CPF,
                           autocomplete: "off",
                           autofocus: true,
                           required: true,
+                          placeholder: " _ _ _ . _ _ _ . _ _ _ - _ _ ",
                           class: "wide-input" %>
         </div>
 
@@ -66,16 +69,17 @@
 
         <div class="field m-2">
           <%= f.label :Telefone %><br />
-          <%= f.password_field :phone_number,
+          <%= f.text_field :phone_number,
                                 autocomplete: "phone-number",
                                 autofocus: true,
                                 required: true,
+                                placeholder: " ( _ _ ) _ _ _ _ _ - _ _ _ _ ",
                                 class: "wide-input" %>
         </div>
 
         <div class="field m-2">
           <%= f.label :Endereço %><br />
-          <%= f.password_field :address,
+          <%= f.text_field :address,
                                 autocomplete: "address",
                                 autofocus: true,
                                 required: true,
