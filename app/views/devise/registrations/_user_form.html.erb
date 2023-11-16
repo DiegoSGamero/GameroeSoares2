@@ -1,13 +1,13 @@
 <div class="d-none container-signup d-flex justify-content-evenly row" data-signup-target="user">
   <div class="signup-form col-sm-10 col-md-6">
-    <h2 style="color: #1c301e;" class="text-center">Cliente</h2>
+    <h2 style="color: #1c301e;" class="text-center">Cliente/Confrontante</h2>
 
-    <div class="user-signup-form text-center">
+    <div class="user-signup-form">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :full_name, "Nome Completo" %><br />
           <%= f.text_field :full_name,
                             autofocus: true,
@@ -16,7 +16,7 @@
                             class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :fantasy_name, "Nome Fantasia(opção empresa)" %><br />
           <%= f.text_field :fantasy_name,
                             autofocus: true,
@@ -24,7 +24,7 @@
                             class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :email %><br />
           <%= f.email_field :email,
                             autofocus: true,
@@ -33,7 +33,7 @@
                             class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :RG, "RG" %><br />
           <%= f.text_field :RG,
                             autocomplete: "off",
@@ -43,7 +43,7 @@
         </div>
 
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :CPF, "CPF" %><br />
           <%= f.text_field :CPF,
                           autocomplete: "off",
@@ -52,7 +52,7 @@
                           class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :CNPJ, "CNPJ (opção empresa)" %><br />
           <%= f.text_field :CNPJ,
                             autocomplete: "off",
@@ -64,7 +64,7 @@
           <%= f.hidden_field :role, value: "User" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :Telefone %><br />
           <%= f.password_field :phone_number,
                                 autocomplete: "phone-number",
@@ -73,7 +73,7 @@
                                 class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :Endereço %><br />
           <%= f.password_field :address,
                                 autocomplete: "address",
@@ -82,15 +82,17 @@
                                 class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :senha %>
           <% if @minimum_password_length %>
           <em>( Mínimo de <%= @minimum_password_length %> caracteres)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
+          <%= f.password_field :password,
+                                autocomplete: "new-password",
+                                class: "wide-input" %>
         </div>
 
-        <div class="field">
+        <div class="field m-2">
           <%= f.label :Confirme_sua_senha %><br />
           <%= f.password_field :password_confirmation,
                                 autocomplete: "new-password",
@@ -103,8 +105,9 @@
         </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
-
+      <div class="my-3">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
   <div class="img-signup col-sm-10 col-md-5 pt-4">

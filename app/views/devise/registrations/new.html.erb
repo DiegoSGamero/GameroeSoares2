@@ -1,11 +1,13 @@
 <div class="container mt-3 justify-content-center" data-controller='signup'>
   <h2 class="my-4 text-center">Comece seu cadastro por aqui</h2>
-  <h4 class="mb-4 text-center">Você é cliente ou moderador?</h4>
+  <h4 class="mb-4 text-center">Você é cliente/confrontante ou moderador?</h4>
   <div class="btns-choose-role d-flex justify-content-evenly my-4">
-    <div class="btn btn-choose-role" data-action="click->signup#showuser">Cliente</div>
+    <div class="btn btn-choose-role" data-action="click->signup#showuser">Cliente/Confrontante</div>
     <div class="btn btn-choose-role" data-action="click->signup#showadmin">Moderador</div>
   </div>
-  <%= render 'user_form' %>
-  <%= render 'admin_form' %>
 
+  <div class="render-signup">
+    <%= render 'user_form' %>
+    <%= render 'admin_form' %>
+  </div>
 </div>
