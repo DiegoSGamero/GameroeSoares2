@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_and_belongs_to_many :properties
 
-  validates :full_name, presence: true, format: { with: /\A[a-zA-Z]+\.?(\s[a-zA-Z]+\.?)+\z/, message: "should have at least 2 names" }
+  validates :full_name, presence: true, format: { with: /\A[a-zA-Z]+\.?(\s[a-zA-Z]+\.?)+\z/, message: "O nome completo deve ter pelo menos 2 nomes" }
   validates :email, presence: true, uniqueness: true
   validates :RG, presence: true, uniqueness: true
   validates :CPF, presence: true, uniqueness: true
