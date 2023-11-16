@@ -13,7 +13,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admin_params)
 
     if @admin.save
-      redirect_to admin_new_session_path
+      redirect_to admin_registration_path
     else
       render :new, status: :unprocessable_entity
     end
