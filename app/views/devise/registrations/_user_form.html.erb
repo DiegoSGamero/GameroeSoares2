@@ -68,7 +68,7 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :Telefone %><br />
+          <%= f.label :phone_number, "Telefone" %><br />
           <%= f.text_field :phone_number,
                                 autocomplete: "phone-number",
                                 autofocus: true,
@@ -78,12 +78,12 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :Endereço %><br />
-          <%= f.text_field :address,
-                                autocomplete: "address",
-                                autofocus: true,
-                                required: true,
-                                class: "wide-input" %>
+          <%= f.label :address, "Endereço" %><br />
+            <%= f.text_field :address,
+                              autocomplete: "address",
+                              autofocus: true,
+                              required: true,
+                              class: "wide-input" %>
         </div>
 
         <div class="field m-2">

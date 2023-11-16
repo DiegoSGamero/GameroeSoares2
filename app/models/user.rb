@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   has_and_belongs_to_many :properties
 
   validates :full_name, presence: true, format: { with: /\A\w+\s+\w+/ }
@@ -11,4 +12,6 @@ class User < ApplicationRecord
   validates :CPF, presence: true, format: { with: /\A\d{3}\.\d{3}\.\d{3}-\d{2}\z/ }
   validates :phone_number, presence: true, format: { with: /\A\(\d{2}\) \d{5}-\d{4}\z/ }
   validates :address, presence: true
+
+
 end
