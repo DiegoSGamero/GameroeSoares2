@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   devise_scope :admin do
     get 'admins/sign_up', to: 'admins/registrations#new'
+    post 'admins', to: 'admins/registrations#create'
   end
 
   root to: "pages#home"

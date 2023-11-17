@@ -61,3 +61,14 @@ pt-BR:
       not_saved:
         one: "Não foi possível salvar este(a) %{resource}:"
         other: "Não foi possível salvar este(a) %{resource}:"
+  activerecord:
+    errors:
+      models:
+        admin:
+          attributes:
+            email:
+              taken: "já está em uso"
+            password:
+              blank: "não pode ficar em branco"
+            username:
+              taken: "já está em uso"

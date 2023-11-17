@@ -3,11 +3,33 @@
 class Admins::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  respond_to :html
+  before_action :configure_sign_up_params, only: [:create]
+
+
+  def new
+    @admin = Admin.new
+  end
 
   def create
-    # Seu código de criação de admin aqui
-    super
+    @admin = Admin.new(admin_params)
+
+    if @admin.save
+      redirect_to admin_registration_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  protected
+
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :username, :email, :password, :password_confirmation])
+  end
+
+  private
+
+  def admin_params
+    params.require(:admin).permit(:full_name, :email, :username)
   end
   # GET /resource/sign_up
   # def new

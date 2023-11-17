@@ -3,7 +3,7 @@
     <h2 style="color: #1c301e;" class="text-center">Moderador</h2>
 
     <div class="admin-signup-form">
-      <%= form_for(resource, as: resource_name, url: admin_registration_path(resource_name)) do |f| %>
+      <%= form_for(resource, as: resource_name, url: admin_registration_path) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field m-2">
@@ -34,21 +34,16 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :senha %>
+          <%= f.label :password, "Senha" %>
           <% if @minimum_password_length %>
-          <em>( Mínimo de <%= @minimum_password_length %> caracteres)</em>
+            <em>( Mínimo de <%= @minimum_password_length %> caracteres)</em>
           <% end %><br />
-          <%= f.password_field :password,
-                                autocomplete: "new-password",
-                                class: "wide-input" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "wide-input" %>
         </div>
 
         <div class="field m-2">
-          <%= f.label :Confirme_sua_senha %><br />
-          <%= f.password_field :password_confirmation,
-                                autocomplete: "new-password",
-                                required: true,
-                                class: "wide-input" %>
+          <%= f.label :password_confirmation, "Confirme sua senha" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, class: "wide-input" %>
         </div>
 
         <div class="actions m-2">
