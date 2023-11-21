@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/conhecimento', to: "pages#knowledge", as: 'knowledge'
   get '/contato', to: "pages#contact", as: 'contact'
   get '/trabalhos', to: "pages#works", as: 'works'
+
+  resources :properties
+
 end
