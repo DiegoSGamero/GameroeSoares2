@@ -1,2 +1,55 @@
-<h1>Properties#new</h1>
-<p>Find me in app/views/properties/new.html.erb</p>
+<div class="container new-property d-flex justify-content-evenly row">
+  <div class="property-form col-sm-10 col-md-6">
+    <h2 style="color: #1c301e;" class="text-center">Nova propriedade</h2>
+
+    <div class="property-new-form">
+      <%= form_for @property do |f| %>
+
+        <div class="field m-2">
+          <%= f.label :name, "Nome" %><br />
+          <%= f.text_field :name,
+                            autofocus: true,
+                            autocomplete: "name",
+                            required: true,
+                            class: "property-field" %>
+        </div>
+
+        <div class="field m-2">
+          <%= f.label :address, "Endereço" %><br />
+          <%= f.text_field :address,
+                            autofocus: true,
+                            autocomplete: "address",
+                            required: true,
+                            class: "property-field" %>
+        </div>
+
+        <div class="field m-2">
+          <%= f.label :owners, "Proprietários" %><br />
+          <%= f.text_field :owners,
+                            autofocus: true,
+                            autocomplete: "owners",
+                            required: true,
+                            class: "property-field" %>
+        </div>
+
+        <div class="field m-2">
+          <%= f.label :size, "Tamanho estimado" %><br />
+          <%= f.text_field :size,
+                            autofocus: true,
+                            autocomplete: "size",
+                            required: true,
+                            class: "property-field" %>
+        </div>
+
+        <%= f.submit %>
+
+      <% end %>
+
+
+
+    </div>
+  </div>
+  <div class="img-signup col-sm-10 col-md-5 pt-4">
+    <%= image_tag('undraw_access_account_re_8spm.svg', alt: 'Cadastro', class:'signup-img') %>
+  </div>
+</div>

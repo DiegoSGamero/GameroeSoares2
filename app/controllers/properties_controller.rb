@@ -4,15 +4,21 @@ class PropertiesController < ApplicationController
   end
 
   def new
+    @property = current_user.properties.build
   end
 
   def create
-
+    @property = current_user.properties.build(property_params)
+    if @property.save
+      redirect_to @property, notice: 'Propriedade criada com sucesso.'
+    else
+      render :new, status: :unprocessable_entity, alert: "Não foi possível fazer o registro dessa propriedade"
+    end
   end
 
   private
 
   def property_params
-    params.require(:property).permit(:date_time, :patient_id, :therapist_id, :start_time, :end_time)
+    params.require(:property).permit(:name, :address, :owners, :size, :limit_type)
   end
 end

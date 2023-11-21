@@ -13,7 +13,7 @@
   <% if user_signed_in? %>
 
     <div class="nav-item p-1">
-      <%= link_to "Cadastre sua propriedade", "/produtos", class: "links_navbar" %>
+      <%= link_to "Cadastre sua propriedade", new_property_path, class: "links_navbar" %>
     </div>
     <div class="nav-item p-1">
       <%= link_to "Produtos", "/produtos", class: "links_navbar" %>
