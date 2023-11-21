@@ -1,22 +1,18 @@
 class PropertiesController < ApplicationController
   def index
-  end
-
-  def show
+    @properties = Property.all
   end
 
   def new
   end
 
   def create
+
   end
 
-  def edit
-  end
+  private
 
-  def update
-  end
-
-  def destroy
+  def property_params
+    params.require(:property).permit(:date_time, :patient_id, :therapist_id, :start_time, :end_time)
   end
 end
