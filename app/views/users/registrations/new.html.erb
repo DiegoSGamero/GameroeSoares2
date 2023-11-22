@@ -1,5 +1,5 @@
 <div class="container-signup d-flex justify-content-evenly row" data-signup-target="user">
-  <div class="signup-form col-sm-10 col-md-6">
+  <div class="signup-form col-sm-10 col-md-5">
     <h2 style="color: #1c301e;" class="text-center my-3">Cadastro</h2>
     <h2 style="color: #1c301e;" class="text-center">Cliente/Confrontante</h2>
 
@@ -35,7 +35,7 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :RG, "RG (somente os dígitos)" %><br />
+          <%= f.label :RG, "RG" %><br />
           <%= f.text_field :RG,
                             autocomplete: "off",
                             autofocus: true,
@@ -46,7 +46,7 @@
 
 
         <div class="field m-2">
-          <%= f.label :CPF, "CPF (somente os dígitos)" %><br />
+          <%= f.label :CPF, "CPF" %><br />
           <%= f.text_field :CPF,
                           autocomplete: "off",
                           autofocus: true,
@@ -64,14 +64,6 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :role, "Cliente ou confrontante?" %><br />
-          <%= f.text_field :role,
-                            autofocus: true,
-                            required: true,
-                            class: "wide-input" %>
-        </div>
-
-        <div class="field m-2">
           <%= f.label :phone_number, "Telefone (com DDD)" %><br />
           <%= f.text_field :phone_number,
                             autocomplete: "phone-number",
@@ -79,6 +71,11 @@
                             required: true,
                             placeholder: "( _ _ ) _ _ _ _ _ - _ _ _ _ ",
                             class: "wide-input" %>
+        </div>
+
+        <div class="field m-2">
+          <%= f.label :role, "Cliente ou confrontante?" %><br />
+          <%= f.select :role, ['Cliente', 'Confrontante'], {}, { class: "wide-input" } %>
         </div>
 
         <div class="field m-2">
@@ -116,7 +113,9 @@
       </div>
     </div>
   </div>
-  <div class="img-signup col-sm-10 col-md-5 pt-4">
+
+  <div class="img-signup-form col-sm-10 col-md-5 pt-4">
     <%= image_tag('undraw_access_account_re_8spm.svg', alt: 'Cadastro', class:'signup-img') %>
   </div>
+
 </div>
