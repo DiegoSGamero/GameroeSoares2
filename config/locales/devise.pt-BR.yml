@@ -72,3 +72,14 @@ pt-BR:
               blank: "não pode ficar em branco"
             username:
               taken: "já está em uso"
+activerecord:
+    errors:
+      models:
+        property:
+          attributes:
+            email:
+              taken: "já está em uso"
+            password:
+              blank: "não pode ficar em branco"
+            username:
+              taken: "já está em uso"

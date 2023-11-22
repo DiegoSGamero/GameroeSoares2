@@ -58,3 +58,22 @@
     box-shadow: -2px -2px 4px 0px #5c5339d5;
   }
 }
+
+
+.btn-registrar {
+  color: #203823;
+  padding: 4px;
+  border: 0.5cm;
+  border-radius: 2px;
+  background-color: #51C874 !important;
+  box-shadow: 0.5px 0.5px 0.5px #a0957586;
+  transition: 0.3s;
+  &:hover {
+    // background-color: #f8e5ad !important;
+    font-weight: bold;
+    box-shadow: 0.5px 0.5px 1px #5c5339d5;
+  }
+  &:active {
+    box-shadow: -0.5px -0.5px 2px 0px #5c5339d5;
+  }
+}
