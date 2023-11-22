@@ -21,6 +21,10 @@ class PropertiesController < ApplicationController
     end
   end
 
+  def profile
+    @user = current_user
+  end
+
   private
 
   def property_params
