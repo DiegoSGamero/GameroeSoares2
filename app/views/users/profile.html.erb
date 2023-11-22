@@ -8,9 +8,14 @@
       <% if @user.fantasy_name.present? %>
         <p class="profile-itemr">Nome Fantasia: <%= @user.fantasy_name %></p>
       <% end %>
+      <% if @user.CNPJ.present? %>
+        <p class="profile-itemr">CNPJ: <%= @user.CNPJ %></p>
+      <% end %>
       <p class="profile-item">CPF: <%= @user.CPF %></p>
       <p class="profile-item">RG: <%= @user.RG %></p>
       <p class="profile-item">Telefone: <%= @user.phone_number %></p>
+      <p class="profile-item">Categoria: <%= @user.role %></p>
+      <p class="profile-item">Email: <%= @user.email %></p>
     </div>
   </div>
 </div>
