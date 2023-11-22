@@ -4,6 +4,7 @@ class PropertiesController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     @property = Property.find(params[:id])
   end
 
@@ -23,6 +24,10 @@ class PropertiesController < ApplicationController
 
   def profile
     @user = current_user
+  end
+
+  def user
+    @user = User.find(params[:id])
   end
 
   private
