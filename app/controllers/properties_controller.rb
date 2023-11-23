@@ -1,7 +1,14 @@
 class PropertiesController < ApplicationController
   def index
-    @properties = Property.all
+    @query = params[:search]&.dig(:query)
+    if @query.present?
+      search_query = "%#{@query}%"
+      @properties = Property.where('name ILIKE :query OR owners ILIKE :query OR registration_number ILIKE :query', query: search_query)
+    else
+      @users = User.all
+    end
   end
+
 
   def show
     @user = User.find(params[:id])
