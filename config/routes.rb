@@ -9,8 +9,13 @@ Rails.application.routes.draw do
   get '/trabalhos', to: "pages#works", as: 'works'
   get '/perfil', to: "users#profile", as: 'profile'
   get '/clientes', to: "users#index", as: 'users_index'
+  get '/propriedades', to: "properties#index", as: 'properties_index'
 
-  resources :properties
+  resources :properties do
+    collection do
+      get 'search_property', to: 'properties#index'
+    end
+  end
 
   resources :users do
     collection do
