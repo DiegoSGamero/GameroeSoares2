@@ -1,29 +1,50 @@
 <h1>Users#index</h1>
 <p>Find me in app/views/users/index.html.erb</p>
 
-<%= form_with(url: users_path, method: :get) do |form| %>
-  <%= form.text_field :search,
-                      placeholder: "Pesquisar usuários..." %>
+<div class="form-no-index d-flex justify-content-center align-items-center text-center">
+  <%= simple_form_for :search, url: search_users_path, method: :get, class: 'd-flex align-items-center ' do |f| %>
+                <div class="row g-2 ">
+                  <div class="col-auto prof-choice">
+                    <%= f.input :query, label: false, placeholder: 'Digite aqui...', input_html: { class: 'form-control' }, wrapper_html: {class: 'm-0'} %>
+                  </div>
 
-  <%= form.submit "Buscar" %>
-<% end %>
+                  <div class="col-auto">
+                    <%= f.button :submit, 'Pesquisar', class: 'search-index mb-2' %>
+                  </div>
+                </div>
+              <% end %>
+</div>
 
-<% if @users.any? { |user| user.full_name.downcase.include?(@query.downcase) || user.CPF.include?(@query) } %>
+<% if @query.present? && @users.any? { |user| user.full_name&.downcase&.include?(@query.downcase) } %>
   <% @users.each do |user| %>
     <div class="card-index-user">
-      <%= @user.full_name %>
-      <% if @user.fantasy_name.present? %>
-        <%= @user.fantasy_name %>
-      <% elsif @user.CNPJ.present? %>
-        <%= @user.CNPJ %>
+      <%= user.full_name %>
+      <% if user.fantasy_name.present? %>
+        <%= user.fantasy_name %>
+      <% elsif user.CNPJ.present? %>
+        <%= user.CNPJ %>
       <% end %>
-      <%= @user.CPF %>
-      <%= @user.RG %>
-      <%= @user.address %>
-      <%= @user.phone_number %>
-      <%= @user.email %>
+      <%= user.CPF %>
+      <%= user.RG %>
+      <%= user.address %>
+      <%= user.phone_number %>
+      <%= user.email %>
     </div>
   <% end %>
 <% else %>
-  <p> Desculpe! Não encontramos <strong><%= @query %></strong> em nosso site.</p>
+  <% @users.each do |user| %>
+    <div class="card-index-user">
+      <%= user.full_name %>
+      <% if user.fantasy_name.present? %>
+        <%= user.fantasy_name %>
+      <% elsif user.CNPJ.present? %>
+        <%= user.CNPJ %>
+      <% end %>
+      <%= user.CPF %>
+      <%= user.RG %>
+      <%= user.address %>
+      <%= user.phone_number %>
+      <%= user.email %>
+    </div>
+  <% end %>
 <% end %>
