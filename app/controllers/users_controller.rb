@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
   def index
+    if params[:search].present? && params[:search][:query].present?
+      @query = params[:search][:query]
+      search_query = "%#{@query}%"
+      @users = User.where('full_name ILIKE :query OR CPF ILIKE :query OR address ILIKE :query', query: search_query)
+    else
+      @query = nil
+      @users = User.all
+    end
   end
 
   def show

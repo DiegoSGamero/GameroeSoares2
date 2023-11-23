@@ -1,2 +1,29 @@
 <h1>Users#index</h1>
 <p>Find me in app/views/users/index.html.erb</p>
+
+<%= form_with(url: users_path, method: :get) do |form| %>
+  <%= form.text_field :search,
+                      placeholder: "Pesquisar usuários..." %>
+
+  <%= form.submit "Buscar" %>
+<% end %>
+
+<% if @users.any? { |user| user.full_name.downcase.include?(@query.downcase) || user.CPF.include?(@query) } %>
+  <% @users.each do |user| %>
+    <div class="card-index-user">
+      <%= @user.full_name %>
+      <% if @user.fantasy_name.present? %>
+        <%= @user.fantasy_name %>
+      <% elsif @user.CNPJ.present? %>
+        <%= @user.CNPJ %>
+      <% end %>
+      <%= @user.CPF %>
+      <%= @user.RG %>
+      <%= @user.address %>
+      <%= @user.phone_number %>
+      <%= @user.email %>
+    </div>
+  <% end %>
+<% else %>
+  <p> Desculpe! Não encontramos <strong><%= @query %></strong> em nosso site.</p>
+<% end %>
