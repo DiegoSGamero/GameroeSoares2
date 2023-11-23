@@ -8,7 +8,13 @@ Rails.application.routes.draw do
   get '/contato', to: "pages#contact", as: 'contact'
   get '/trabalhos', to: "pages#works", as: 'works'
   get '/perfil', to: "users#profile", as: 'profile'
+  get '/clientes', to: "users#index", as: 'users_index'
 
   resources :properties
 
+  resources :users do
+    collection do
+      get 'search', to: 'users#index'
+    end
+  end
 end

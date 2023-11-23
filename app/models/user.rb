@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :CPF, presence: true, uniqueness: true
   validates :phone_number, presence: true
   validates :address, presence: true
-  ROLES = %w[cliente Cliente Confrontante confrontante].freeze
+  ROLES = %w[cliente Cliente Confrontante confrontante]
   validates :role, inclusion: { in: ROLES }
 
 end
