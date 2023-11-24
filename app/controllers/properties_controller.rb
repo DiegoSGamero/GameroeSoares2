@@ -5,7 +5,7 @@ class PropertiesController < ApplicationController
       search_query = "%#{@query}%"
       @properties = Property.where('name ILIKE :query OR owners ILIKE :query OR registration_number ILIKE :query', query: search_query)
     else
-      @users = User.all
+      @properties = Property.all
     end
   end
 
