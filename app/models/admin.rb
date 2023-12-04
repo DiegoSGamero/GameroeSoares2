@@ -7,5 +7,5 @@ class Admin < ApplicationRecord
   validates :full_name, presence: true, format: { with: /\A[a-zA-Z]+\.?(\s[a-zA-Z]+\.?)+\z/, message: "O nome completo deve ter pelo menos 2 nomes" }
   validates :email, presence: true, uniqueness: true
   validates :username, presence: true, uniqueness: true
-  # validates :password, presence: true
+  validates :password, format: { with: /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}\z/, message: "Deve conter pelo menos uma letra e um número" }
 end
