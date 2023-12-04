@@ -14,5 +14,6 @@ class User < ApplicationRecord
   validates :address, presence: true
   ROLES = %w[cliente Cliente Confrontante confrontante]
   validates :role, inclusion: { in: ROLES }
+  validates :password, format: { with: /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}\z/, message: "Deve conter pelo menos uma letra e um número" }
 
 end
