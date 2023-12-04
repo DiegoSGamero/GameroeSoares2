@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "./home/_carousel"
-import "registration"
+import "./pages/_knowledge"
