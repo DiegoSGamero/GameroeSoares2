@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :RG, presence: true, uniqueness: true, format: { with: /\A\d{7,9}\z/, message: "O RG deve ter entre 7 e 9 dígitos" }
   validates :CPF, presence: true, uniqueness: true, format: { with: /\A\d{11}\z/, message: "O CPF deve ter exatamente 11 dígitos" }
-  validates :phone_number, presence: true
+  validates :phone_number, presence: true, format: { with: /\A\d{10,11}\z/, message: "O número de telefone deve ter entre 10 e 11 dígitos" }
   validates :address, presence: true
   ROLES = %w[cliente Cliente Confrontante confrontante]
   validates :role, inclusion: { in: ROLES }

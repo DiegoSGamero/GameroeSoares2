@@ -1,4 +1,4 @@
-<div class="navbar p-1 d-flex row">
+<div class="navbar p-1 d-flex justify-content-evenly row">
   <%# logotipo link to home %>
   <div class="logo col-2">
     <%= link_to root_path, class: "navbar-brand m-0" do %>
@@ -8,9 +8,9 @@
 
   <%# company demonstrative items divided by type of user %>
 
-  <div class="col-7 nav-items d-flex justify-content-between">
+<% if user_signed_in? %>
 
-  <% if user_signed_in? %>
+  <div class="col-7 nav-items d-flex justify-content-between">
 
     <div class="nav-item p-1">
       <%= link_to "Cadastre sua propriedade", new_property_path, class: "links_navbar" %>
@@ -33,14 +33,17 @@
 
   </div>
 
-  <div class="col-sm-7 col-2">
+  <div class="col-2">
     <div class="btn login-home ms-5 p-1 text-center">
       <%= link_to "Sair", destroy_user_session_path, data: {turbo_method: :delete}, class: "sign_up_bar" %>
     </div>
   </div>
 
-  <% elsif admin_signed_in? %>
+</div>
 
+<% elsif admin_signed_in? %>
+
+  <div class="col-7 nav-items d-flex justify-content-between">
     <div class="nav-item p-1">
       <%= link_to "Clientes", "/clientes", class: "links_navbar" %>
     </div>
@@ -54,9 +57,11 @@
       <%= link_to "Sair", destroy_admin_session_path, data: {turbo_method: :delete}, class: "sign_up_bar" %>
     </div>
   </div>
+</div>
 
-  <% else %>
+<% else %>
 
+  <div class="col-7 nav-items d-flex justify-content-between">
     <div class="nav-item p-1">
       <%= link_to "Produtos", "/produtos", class: "links_navbar" %>
     </div>

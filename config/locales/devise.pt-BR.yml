@@ -72,6 +72,7 @@ pt-BR:
               blank: "não pode ficar em branco"
             username:
               taken: "já está em uso"
+            invalid: "não é válido, verifique se contém 'gamero', ao menos um número e um caractere especial"
 activerecord:
     errors:
       models:
