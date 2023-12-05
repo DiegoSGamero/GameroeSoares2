@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand{-sm|-md|-lg|-xl|-xxl} p-1 d-flex row">
+<div class="navbar p-1 d-flex row">
   <%# logotipo link to home %>
   <div class="logo col-2">
     <%= link_to root_path, class: "navbar-brand m-0" do %>
@@ -8,7 +8,7 @@
 
   <%# company demonstrative items divided by type of user %>
 
-  <div class="col-7 d-flex justify-content-between">
+  <div class="col-7 nav-items d-flex justify-content-between">
 
   <% if user_signed_in? %>
 
@@ -33,7 +33,7 @@
 
   </div>
 
-  <div class="col-2">
+  <div class="col-sm-7 col-2">
     <div class="btn login-home ms-5 p-1 text-center">
       <%= link_to "Sair", destroy_user_session_path, data: {turbo_method: :delete}, class: "sign_up_bar" %>
     </div>

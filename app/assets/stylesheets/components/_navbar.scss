@@ -40,3 +40,35 @@
   text-decoration: none;
   color: #2C4C30;
 }
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: start;
+    width: 768px;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .nav-item {
+    margin: 2px;
+    font-size: 14px;
+  }
+
+  .sign_up_bar {
+    height: 24px;
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .logo {
+    margin-right: 2px;
+  }
+
+  .nav-items {
+    margin-left: 2px;
+  }
+}
