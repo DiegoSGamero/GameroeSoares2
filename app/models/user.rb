@@ -8,8 +8,8 @@ class User < ApplicationRecord
 
   validates :full_name, presence: true, format: { with: /\A[a-zA-Z]+\.?(\s[a-zA-Z]+\.?)+\z/, message: "O nome completo deve ter pelo menos 2 nomes" }
   validates :email, presence: true, uniqueness: true
-  validates :RG, presence: true, uniqueness: true
-  validates :CPF, presence: true, uniqueness: true
+  validates :RG, presence: true, uniqueness: true, format: { with: /\A\d{7,9}\z/, message: "O RG deve ter entre 7 e 9 dígitos" }
+  validates :CPF, presence: true, uniqueness: true, format: { with: /\A\d{11}\z/, message: "O CPF deve ter exatamente 11 dígitos" }
   validates :phone_number, presence: true
   validates :address, presence: true
   ROLES = %w[cliente Cliente Confrontante confrontante]
