@@ -1,4 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
+//   const buttons = document.querySelectorAll(".knowledge-topics .btn");
+//   const sections = document.querySelectorAll(".knowledge-texts > div");
+
+//   buttons.forEach(function(button, index) {
+//     button.addEventListener("click", function() {
+//       sections[index].scrollIntoView({ behavior: "smooth" });
+//     });
+//   });
+// });
+window.onload = function() {
   const buttons = document.querySelectorAll(".knowledge-topics .btn");
   const sections = document.querySelectorAll(".knowledge-texts > div");
 
@@ -7,4 +17,4 @@ document.addEventListener("DOMContentLoaded", function() {
       sections[index].scrollIntoView({ behavior: "smooth" });
     });
   });
-});
+};

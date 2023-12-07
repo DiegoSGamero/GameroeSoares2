@@ -1,16 +1,29 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container container-forgot">
+  <div class="products-title p-3 m-2">
+    <h2>Forgot your password?</h2>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <div class="forgot-password">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <div class="p-2 m-0">
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= render "devise/shared/links" %>
+        <div class="">
+          <%= f.label :email %><br />
+          <%= f.email_field :email,
+                            autofocus: true,
+                            autocomplete: "email" %>
+        </div>
+      </div>
+
+      <div class="actions p-2">
+        <%= f.submit "Enviar instruções de senha" %>
+      </div>
+    <% end %>
+
+    <div class="back-button ms-2">
+      <%= link_to "Voltar", "/", class: "btn back-to-users" %>
+    </div>
+
+  </div>
+</div>
