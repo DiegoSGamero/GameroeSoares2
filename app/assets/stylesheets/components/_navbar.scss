@@ -79,7 +79,7 @@
   .navbar {
     display: flex;
     justify-content: start !important;
-    width: 400px;
+    width: 400px !important;
     flex-direction: column;
     align-items: flex-start;
     font-size: 8px;
@@ -107,4 +107,30 @@
   .nav-items {
     margin-left: 1px;
   }
+
+  .btn-login-form {
+    text-decoration: none;
+    color: #2C4C30;
+    padding: 1px;
+    border-radius: 2px;
+    margin-top: 2px !important;
+    margin-left: 2px !important;
+    font-size: 10px;
+  }
+
+  .sign_up_bar {
+    text-decoration: none;
+    color: #2C4C30;
+    padding: 0.5px;
+    border-radius: 2px;
+    margin-top: 2px !important;
+    margin-left: 2px !important;
+    font-size: 8px;
+    height: 12px;
+  }
+
+  .btn-login-home{
+    height: 12px !important;
+  }
+
 }
