@@ -1,4 +1,5 @@
 .navbar {
+  justify-content: space-evenly;
   background-color: #e9e9e9;
   height: 70px;
   font-size: large;
@@ -127,10 +128,6 @@
     margin-left: 2px !important;
     font-size: 8px;
     height: 12px;
-  }
-
-  .btn-login-home{
-    height: 12px !important;
   }
 
 }

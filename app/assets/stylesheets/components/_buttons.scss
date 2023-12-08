@@ -18,6 +18,29 @@
   }
 }
 
+.login-home-2 {
+  width: 40px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #51C874 !important;
+  box-shadow: 0px 0px 2px #5c5339d5;
+  margin-right: 4px;
+  margin-top: 8px;
+  align-items: center;
+  transition: 0.3s;
+  p {
+    color: #2C4C30;
+  }
+  &:hover {
+    // background-color: #f8e5ad !important;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px #5c5339d5;
+  }
+  &:active {
+    box-shadow: -2px -2px 4px 0px #5c5339d5;
+  }
+}
+
 .btn-choose-role {
   // width: 60px;
   padding: 8px;
