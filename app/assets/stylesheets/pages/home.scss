@@ -82,6 +82,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .container-banner {
+    width: 600px;
+  }
+
+}
+
 // undraw image
 .agreement {
   width: 350px;

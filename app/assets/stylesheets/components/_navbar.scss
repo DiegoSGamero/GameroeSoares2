@@ -44,7 +44,7 @@
 @media screen and (max-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: start;
+    justify-content: start !important;
     width: 768px;
     flex-direction: column;
     align-items: flex-start;
@@ -72,5 +72,39 @@
 
   .nav-items {
     margin-left: 2px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    display: flex;
+    justify-content: start !important;
+    width: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 8px;
+    padding: 2px;
+  }
+
+  .nav-item {
+    margin: 1px;
+    font-size: 8px;
+  }
+
+  .sign_up_bar {
+    height: 10px;
+    text-align: center;
+    margin-top: 1px;
+  }
+
+  .logotipo {
+    width: 25px;
+    margin-left: 1px;
+    margin-right: 0;
+    margin-top: -1px;
+  }
+
+  .nav-items {
+    margin-left: 1px;
   }
 }
