@@ -35,6 +35,3 @@ controls.forEach(control => {
     });
   })
 });
-
-
-

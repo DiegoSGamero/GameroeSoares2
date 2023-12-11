@@ -83,16 +83,11 @@
 }
 
 .current-item {
-  width: 90%px;
+  width: 90%;
   height: 350px;
 }
 
-@media screen and (max-width: 768px) {
-  .container-banner {
-    width: 600px;
-  }
-
-}
+//responsivity
 
 // undraw image
 .agreement {
@@ -111,16 +106,13 @@
   color: #1c301e;
 }
 
+//carousel
 @media screen and (max-width: 768px) {
   .container-banner {
     margin-left: 25px;
     width: 690px;
   }
 
-  // .landing-animation {
-  //   width: 150px;
-  //   height: 115px;
-  // }
 }
 
 @media screen and (max-width: 400px) {

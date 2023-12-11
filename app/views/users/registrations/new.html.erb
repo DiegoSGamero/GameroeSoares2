@@ -10,8 +10,6 @@
         <div class="field m-2">
           <%= f.label :full_name, "Nome Completo" %><br />
           <%= f.text_field :full_name,
-                            autofocus: true,
-                            autocomplete: "full_name",
                             required: true,
                             class: "wide-input" %>
         </div>
@@ -20,7 +18,6 @@
           <%= f.label :fantasy_name, "Nome Fantasia (opção empresa)" %><br />
           <%= f.text_field :fantasy_name,
                             autofocus: true,
-                            autocomplete: "fantasy_name",
                             class: "wide-input" %>
         </div>
 
@@ -66,7 +63,6 @@
         <div class="field m-2">
           <%= f.label :phone_number, "Telefone (com DDD)" %><br />
           <%= f.text_field :phone_number,
-                            autocomplete: "phone-number",
                             autofocus: true,
                             required: true,
                             placeholder: "( _ _ ) _ _ _ _ _ - _ _ _ _ ",
