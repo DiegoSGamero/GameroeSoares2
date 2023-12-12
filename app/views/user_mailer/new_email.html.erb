@@ -1,0 +1,17 @@
+<%= form_with(model: @email, url: send_email_path) do |form| %>
+  <div class="field">
+    <%= form.label :recipient %>
+    <%= form.text_field :recipient %>
+  </div>
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Enviar E-mail" %>
+  </div>
+<% end %>

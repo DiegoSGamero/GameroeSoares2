@@ -22,4 +22,6 @@ Rails.application.routes.draw do
       get 'search', to: 'users#index'
     end
   end
+
+  post 'contato/enviar_email', to: 'user_mailer#contact_email'
 end
