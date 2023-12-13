@@ -6,8 +6,9 @@
       <%= form_for @property do |f| %>
 
         <div class="field m-2">
-          <%= f.label :name, "Nome" %><br />
+          <%= f.label :name, "Nome", for: "property_name" %><br />
           <%= f.text_field :name,
+                            id: "property_name",
                             autofocus: true,
                             autocomplete: "name",
                             required: true,
@@ -15,8 +16,9 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :address, "Endereço" %><br />
+          <%= f.label :address, "Endereço", for: "property_address" %><br />
           <%= f.text_field :address,
+                            id: "property_address",
                             autofocus: true,
                             autocomplete: "address",
                             required: true,
@@ -24,8 +26,9 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :owners, "Proprietários" %><br />
+          <%= f.label :owners, "Proprietários", for: "property_owners" %><br />
           <%= f.text_field :owners,
+                            id: "property_owners",
                             autofocus: true,
                             autocomplete: "owners",
                             required: true,
@@ -33,8 +36,9 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :size, "Tamanho estimado" %><br />
+          <%= f.label :size, "Tamanho estimado", for: "property-size" %><br />
           <%= f.text_field :size,
+                            id: "property-size",
                             autofocus: true,
                             autocomplete: "size",
                             required: true,
@@ -42,8 +46,9 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :registration_number, "Matrícula" %><br />
+          <%= f.label :registration_number, "Matrícula", for: "property-number" %><br />
           <%= f.text_field :registration_number,
+                            id: "property-number",
                             autofocus: true,
                             autocomplete: "registration_number",
                             required: true,
@@ -51,24 +56,27 @@
         </div>
 
         <div class="field m-2">
-          <%= f.label :limit_type, "Tipos de divisa" %><br />
+          <%= f.label :limit_type, "Tipos de divisa", for: "property_limits" %><br />
           <%= f.text_field :limit_type,
+                            id: "property_limits",
                             autofocus: true,
                             required: true,
                             class: "property-field" %>
         </div>
 
         <div class="field m-2">
-          <%= f.label :car, "CAR (Cadastro Ambiental Rural) - opcional" %><br />
+          <%= f.label :car, "CAR (Cadastro Ambiental Rural) - opcional", for: "property_car" %><br />
           <%= f.text_field :limit_type,
+                            id: "property_car",
                             autofocus: true,
                             required: true,
                             class: "property-field" %>
         </div>
 
         <div class="field m-2">
-          <%= f.label :ccir, "CCIR (Cadastro de Imóveis Rurais) - opcional" %><br />
+          <%= f.label :ccir, "CCIR (Cadastro de Imóveis Rurais) - opcional", for: "property_ccir" %><br />
           <%= f.text_field :limit_type,
+                            id: "property_ccir",
                             autofocus: true,
                             required: true,
                             class: "property-field" %>
