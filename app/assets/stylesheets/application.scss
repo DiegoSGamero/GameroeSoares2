@@ -5,20 +5,10 @@
 
 //CSS partials
 
-@import "components/buttons";
-@import "components/footer";
-@import "components/forms";
-@import "components/navbar";
+@import "components/index";
 
-@import "pages/forgot_password.scss";
-@import "pages/home.scss";
-@import "pages/knowledge.scss";
-@import "pages/login.scss";
-@import "pages/products.scss";
-@import "pages/signup.scss";
-@import "pages/email.scss";
+@import "pages/index";
 
-@import "properties/new.scss";
-@import "properties/show.scss";
+@import "properties/properties";
 
 @import "user/user";
