@@ -23,5 +23,6 @@ Rails.application.routes.draw do
     end
   end
 
-  post 'contato/enviar_email', to: 'user_mailer#contact_email'
+  get '/orcamento', to: 'user_mailer#new'
+  post '/orcamento/enviar_email', to: 'user_mailer#contact_email'
 end

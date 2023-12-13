@@ -1,11 +1,13 @@
 class UserMailerController < ApplicationController
   def new
-    @email = Email.new
+    @contact = {}
   end
 
   def contact_email
-    # Lógica para enviar o e-mail usando o mailer
-    UserMailer.contact_email(params[:email]).deliver_now
+    @contact = params[:contact] # Recebe os dados do formulário
+
+    # Use os dados @contact para enviar o e-mail
+    UserMailer.contact_email(@contact).deliver_now # Exemplo de como chamar o método de envio do email do Mailer
   end
 
   def send_email
@@ -13,4 +15,11 @@ class UserMailerController < ApplicationController
     UserMailer.contact_email(email_params).deliver_now
     redirect_to root_path, notice: 'E-mail enviado com sucesso!'
   end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:name, :phone_number, :message)
+  end
+
 end
