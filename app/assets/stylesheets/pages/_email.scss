@@ -1,3 +1,8 @@
+.container-budget {
+  height: 100vh;
+  width: 100%;
+}
+
 .mail-form {
   color: #1c301e;
   margin-bottom: 120px;
@@ -10,7 +15,13 @@
   box-shadow: 0px 4px 4px -4px #2C4C30;
 }
 
+.mail-field {
+  color: #1c301e;
+  margin: 8px;
+}
+
 .send-email {
   color: #1c301e;
-  background-color:#65ac6f
+  background-color:#65ac6f;
+  border-radius: 4px !important;
 }

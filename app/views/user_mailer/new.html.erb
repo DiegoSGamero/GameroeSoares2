@@ -1,7 +1,9 @@
 <div class="container container-budget">
+
   <div class="make-budget mailer-title text-center my-3">
     <h1>Solicite aqui seu orçamento</h1>
   </div>
+
   <div class="mail-form">
     <%= form_with(model: @email, url: orcamento_enviar_email_path) do |form| %>
       <div class="mail-field">
@@ -16,9 +18,10 @@
         <%= form.label :body, "Sua mensagem" %>
         <%= form.text_area :body %>
       </div>
-      <div class="actions send-email">
-        <%= form.submit "Enviar E-mail" %>
+      <div class="actions">
+        <%= form.submit "Enviar E-mail", class: "send-email" %>
       </div>
     <% end %>
   </div>
+
 </div>
